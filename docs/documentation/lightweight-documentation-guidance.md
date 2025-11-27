@@ -1,9 +1,11 @@
 # Lightweight Documentation
 
 Documentation isn’t about writing a masterpiece — it’s about giving future-you a fighting chance when something breaks at the worst possible moment.
+
 It’s the difference between “Oh, right, I changed that last month” and “Who touched this and why does it hate me?”
 
 Whether you’re spinning up your first VM or maintaining a small empire of hypervisors, keeping simple notes alongside your work makes everything easier.
+
 Clear documentation shortens rebuild time, prevents déjà vu troubleshooting, and helps you understand why past-you made the choices they did — even if you’d rather not know.
 
 The aim here is a **practical, low-effort habit**, not corporate process theatre.
@@ -172,7 +174,7 @@ Documentation follows a simple loop:
 Lightweight documentation keeps your homelab maintainable without slowing you down.
 Small, consistent notes build a clear picture of your environment and make troubleshooting far calmer — especially when something fails at 2 AM.
 
-Start simple, keep it consistent, and give future-you the clarity they deserve.
+Start simple, stay consistent, and give future-you the clarity they deserve.
 You can always build more formal documentation later, but you don’t have to.
 
 Start simple, stay consistent, and give your future self the clarity they deserve.
