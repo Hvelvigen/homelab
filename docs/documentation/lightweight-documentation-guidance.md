@@ -16,12 +16,14 @@ This guide applies to everyone — from beginners still wrestling with ports and
 
 ## Repository Location
 
+```
 docs/
 ├── naming.md
 ├── structure-guidance.md
 └── documentation/
     ├── lightweight-documentation.md   ← you are here
     └── ...
+```
 
 ---
 
