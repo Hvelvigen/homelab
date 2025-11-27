@@ -6,7 +6,7 @@ Keyboard-only inputs appear in brackets; each `[]` represents a single key press
 
 ---
 
-## Repository Location
+## Repository location
 
 ```
 systems/
@@ -16,7 +16,7 @@ systems/
 ```
 ---
 
-## Before You Begin
+## Before you begin
 This guide assumes:
 
 - **System requirements**:
@@ -43,7 +43,7 @@ Post-install configuration, hardening, and service setup are handled in separate
 
 ---
 
-## Installation Guide
+## Installation guide
 
 1. Start the VM.
 
@@ -59,7 +59,7 @@ Post-install configuration, hardening, and service setup are handled in separate
 
 ---
 
-### Network Configuration
+### Network configuration
 
 7. Network Configuration depends on your environment, you may need to set this manually if using non-DHCP reserved static assignments (hello Excel!).
    Choose the method appropriate for your environment:
@@ -83,7 +83,7 @@ Post-install configuration, hardening, and service setup are handled in separate
 
 ---
 
-### Mirror Test
+### Mirror test
 
 10. If networking is correct, the mirror test passes.  
 Select **Done** → **[Enter]**.  
@@ -91,7 +91,7 @@ If not, revisit Step 7 and try again — Ubuntu is usually right when it says so
 
 ---
 
-### Storage Configuration
+### Storage configuration
 
 11. In the storage screen:
     - Use **Use an entire disk**
@@ -108,7 +108,7 @@ If not, revisit Step 7 and try again — Ubuntu is usually right when it says so
 
 ---
 
-### Profile Setup
+### Profile setup
 
 14. Enter your name, server name, username, password.  
 Use **[Tab]** → **Done** → **[Enter]**.
@@ -121,7 +121,7 @@ Use **[Tab]** → **Done** → **[Enter]**.
 
 ---
 
-### SSH and Snaps
+### SSH and snaps
 
 16. Skip SSH (we configure it properly in post-install) → **[Tab][Enter]**
 
@@ -142,7 +142,7 @@ Use **[Tab]** → **Done** → **[Enter]**.
 
 ---
 
-## Why These Choices Were Made
+## Why these choices were made
 
 ### Default “Ubuntu Server”
 The installer’s default **Ubuntu Server** selection is intentionally used here because it provides:
@@ -150,7 +150,7 @@ The installer’s default **Ubuntu Server** selection is intentionally used here
 - a well-supported package set,
 - and none of the desktop or unnecessary service overheads.
 
-### Two-Disk Layout
+### Two-Disk layout
 Using a dedicated **system disk** keeps the OS self-contained and disposable.  
 The **secondary disk** becomes the home for Docker, service data, logs, and anything designed to persist across rebuilds.
 
@@ -172,7 +172,7 @@ Disabling LVM gives you:
 - less abstraction,
 - and an easier time snapshotting, backing up, or rebuilding.
 
-### Networking Approach
+### Networking approach
 Networking is one of the easiest ways an installation can go sideways.
 
 The guide supports three approaches because different homelabs behave differently:
@@ -194,7 +194,7 @@ Skipping SSH now means:
 
 It’s not skipped because SSH is “bad”; it’s skipped so *you* decide how it starts.
 
-### Skip Snaps
+### Skip snaps
 Snaps:
 - auto-update,
 - operate under confinement rules,
@@ -219,7 +219,7 @@ By skipping it during installation:
 
 It keeps the *first build* simple and reproducible.
 
-### Detail Level
+### Detail level
 The goal is clarity for all experience levels.  
 Someone installing Ubuntu for the first time should be able to follow this without stress.  
 Someone experienced should be able to skim the headings and still know exactly what the installer will do.
@@ -231,7 +231,7 @@ This section is here so I don’t have to make eye contact with myself while ans
 
 ---
 
-## Next Steps
+## Next steps
 The OS is installed.  
 Continue with post-install configuration, hardening, and service deployment.
 
