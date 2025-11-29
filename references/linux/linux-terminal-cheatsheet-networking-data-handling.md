@@ -154,6 +154,7 @@ ethtool <interface>        # link info
 ```
 ---
 
+## 14. Summary
 Networking and data-handling tools let you see how your server is behaving beneath the surface.
 Once you can check interfaces, confirm routing, test services, and filter output, troubleshooting becomes far less guesswork.
 
