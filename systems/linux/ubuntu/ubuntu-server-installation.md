@@ -14,6 +14,7 @@ Keyboard-only inputs appear in brackets; each `[]` represents a single key press
 systems/
 └── linux/
     └── ubuntu/
+        └── ubuntu-ssh-configuration.md   
         └── ubuntu-server-installation.md        ← you are here
         └── ubuntu-server-post-installation.md   
 ```
