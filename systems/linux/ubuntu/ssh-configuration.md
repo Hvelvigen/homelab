@@ -12,6 +12,17 @@ The process is staged to avoid accidental lockouts:
 
 ---
 
+## Repository Location
+
+```
+systems/
+└── linux/
+    └── ubuntu/
+        └── ubuntu-ssh-configuration.md         ← you are here
+        └── ubuntu-server-installation.md        
+        └── ubuntu-server-post-installation.md   
+```
+
 ## Before You Begin
 You should have:
 
