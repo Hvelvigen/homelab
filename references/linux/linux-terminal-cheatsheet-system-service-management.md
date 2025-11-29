@@ -162,8 +162,7 @@ sudo ufw enable
 
 Document firewall changes when you make them — future‑you will appreciate it.
 
-
-## 14. Summary
+## 11. Summary
 Hopefully, it's around here where Ubuntu Server starts to feel predictable.
 Once you’re comfortable checking logs, restarting services, monitoring resources, and keeping packages up to date, you're ready to expand your knowledge.
 
