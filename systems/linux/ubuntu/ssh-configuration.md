@@ -499,3 +499,7 @@ It’s lightweight, predictable, and perfect for homelabs.
 - If you break SSH: revert the last change in `sshd_config`, restart the service, test again
 
 Simple habits that prevent complicated evenings.
+
+## Recipe Building
+This guide forms the **Access & Security Baseline** component for recipe-style builds.
+Use it after the Post-Installation Configuration step and before any service-host or application setup.
