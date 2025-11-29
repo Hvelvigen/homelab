@@ -161,3 +161,13 @@ sudo ufw enable
 ```
 
 Document firewall changes when you make them — future‑you will appreciate it.
+
+
+## 14. Summary
+Hopefully, it's around here where Ubuntu Server starts to feel predictable.
+Once you’re comfortable checking logs, restarting services, monitoring resources, and keeping packages up to date, you're ready to expand your knowledge.
+
+You don’t need to know every command by heart — you just need to know where to look.
+APT manages software, systemctl manages services, logs explain behaviour, and the monitoring tools give you a clear picture of how the server is holding up.
+
+In setting these foundations, managing a Linux server becomes less intimidating and much more methodical.
