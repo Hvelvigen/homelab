@@ -8,12 +8,16 @@ Keyboard-only inputs appear in brackets; each `[]` represents a single key press
 
 ## Repository location
 
+## Repository Location
+
 ```
 systems/
 └── linux/
     └── ubuntu/
-        └── ubuntu-server-installation.md   ← you are here
+        └── ubuntu-server-installation.md        ← you are here
+        └── ubuntu-server-post-installation.md   
 ```
+
 ---
 
 ## Before you begin
