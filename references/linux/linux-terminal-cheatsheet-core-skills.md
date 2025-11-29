@@ -230,3 +230,10 @@ sudo !!             # useful but risky if the last command was wrong
 ```
 
 If you ever think “should I run this?” — stop and check.
+
+## 16. Summary
+Core terminal skills are the foundation of everything you’ll do on the Linux side of your homelab. 
+Once you can move around confidently, read files, edit configs, search for what you need, and understand permissions, the rest becomes far easier to do.
+
+You don’t need to memorise every command — you just need to recognise the patterns and know where to look when you’re not sure. 
+Most of Linux is made up of small, predictable building blocks, and these are the ones you’ll use every day.
