@@ -9,7 +9,8 @@ This guide applies a clean, minimal post-install baseline for Ubuntu Server, foc
 systems/
 └── linux/
     └── ubuntu/
-        └── ubuntu-server-installation.md 
+        └── ubuntu-ssh-configuration.md   
+        └── ubuntu-server-installation.md        
         └── ubuntu-server-post-installation.md   ← you are here
 ```
 
