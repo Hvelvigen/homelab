@@ -54,6 +54,7 @@ sudo apt-get install openssh-server
 Open the SSH configuration file:
 
 ```bash
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 sudo nano /etc/ssh/sshd_config
 ```
 
