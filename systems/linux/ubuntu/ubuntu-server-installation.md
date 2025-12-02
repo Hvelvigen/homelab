@@ -6,8 +6,6 @@ Keyboard-only inputs appear in brackets; each `[]` represents a single key press
 
 ---
 
-## Repository location
-
 ## Repository Location
 
 ```
