@@ -71,7 +71,7 @@ These folders are declared in the root README but not yet populated:
 
 ### Planned
 - “Copy/Paste → Go” folder for ready-use snippets
-- HA & templates - Include Intuition (ONLY BASIC - don't add the propriatary stuff you moron!)
+- HA & templates - Include Intuition (ONLY BASIC - don't add the propriatary stuff)
 - Docker service templates (Portainer, Gitea, NPM, etc.)
 - Windows PowerShell templates for homelab use - Use DV6 templates WITHOUT Modern Deployment
 
