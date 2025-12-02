@@ -182,7 +182,7 @@ recipes/
 
 Categories might include:
 
-- starter - Usefule for beginners or to achieve specific outcomes
+- starter - Useful for beginners or to achieve specific outcomes
 - docker  
 - home-assistant  
 - infrastructure  
