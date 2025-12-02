@@ -71,6 +71,8 @@ A lightweight, real-time system monitor that helps you understand what the machi
 sudo apt-get install btop
 ```
 
+With the basic tooling installed, we now move into lightweight security foundations — the pieces that keep the system predictable and accountable over its lifetime.
+
 ---
 
 # Configure Audit Logging
@@ -84,7 +86,9 @@ sudo apt-get install auditd
 sudo systemctl enable --now auditd
 ```
 
-The default rule set is fine for a homelab server.
+The default rule set is fine for a homelab server. 
+
+With audit logging in place, the next step is keeping system logs tidy so they never grow out of control.
 
 ---
 
@@ -122,6 +126,7 @@ journalctl --disk-usage
 After many troubleshooting sessions, I strongly recommend setting journal retention controls (log file limits) - it's more sustainable than continually expanding your virtual disk (and then planning which VM you're moving to another disk so you can accomodate the next). 
 
 If you need to retain logs, offload them from `/` — We'll cover that in another guide.
+Now that logging is stabilised; we apply a few safe kernel-level protections that reduce unnecessary network exposure.
 
 ---
 
