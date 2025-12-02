@@ -199,7 +199,9 @@ Check the port:
 sudo ss -tuln | grep 2022
 ```
 
-If nothing appears, don’t panic — I’ve had this happen on fresh installs.
+If the port change doesn’t appear immediately, don’t panic — I’ve had this happen on a fresh system, it’s usually just the SSH service not having reloaded cleanly. 
+It happens, even when you do everything right.
+
 A quick reboot usually kicks systemd into applying the updated socket bindings properly:
 
 ```bash
