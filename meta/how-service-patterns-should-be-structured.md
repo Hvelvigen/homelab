@@ -175,5 +175,3 @@ systems/home-assistant/core/patterns/mqtt.md
 ---
 
 This document defines how service patterns should be structured to stay reusable, scalable, and consistent across the Hvelvigen repository.
-
-
