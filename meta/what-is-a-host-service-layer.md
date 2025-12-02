@@ -31,7 +31,7 @@ A Host Service Layer guide provides:
 - where persistent data lives  
 - where application runtimes sit  
 - where configs should be placed  
-- a consistent internal layout (e.g. `/srv/docker/<service>`)
+- a consistent internal layout (e.g. `/srv/host-<role>/`)
 
 ### **2.2 Dependencies & Runtimes**
 - Docker / Podman / container runtimes  
