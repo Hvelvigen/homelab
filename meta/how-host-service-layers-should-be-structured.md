@@ -30,14 +30,14 @@ Each guide should follow this consistent structure:
 
 ---
 
-## **2.1 Purpose / Role Definition**
+## **2.1 Role Definition**
 A short paragraph describing:
 
 - what the appliance is for  
 - why you would choose this role  
 - how it fits into a wider homelab design  
 
-Keep this clear and high-level.
+Keep this clear and high‑level.
 
 ---
 
@@ -45,10 +45,10 @@ Keep this clear and high-level.
 State what must exist before applying this layer:
 
 - OS installed (Base Operating System layer)  
-- OS secured (Post-Installation Configuration layer)  
+- OS secured (Post‑Installation Configuration layer)  
 - hardware expectations  
 - networking assumptions (e.g. static IP recommended)  
-- any platform-specific requirements  
+- any platform‑specific requirements  
 
 Do **not** repeat OS configuration content here.
 
@@ -75,13 +75,20 @@ Document a predictable directory layout, including:
 - logs and runtime files  
 - any recommended organisational patterns  
 
-Example:
+Host Service Layers must use:
 
 ```
-/srv/docker/
-/srv/docker/_templates/
-/srv/<role>/config/
-/srv/<role>/data/
+/srv/host-<role>/
+```
+
+Recommended structure:
+
+```
+/srv/host-<role>/
+  config/
+  data/
+  logs/
+  _templates/
 ```
 
 Consistency here is key for automation, rebuilding, and future recipes.
@@ -112,7 +119,7 @@ Configuration specific to the host’s identity, such as:
 - file permission patterns  
 - systemd services or helpers  
 - backup expectations  
-- role-appropriate update strategy  
+- role‑appropriate update strategy  
 
 Avoid “service pattern” behaviour here — that belongs elsewhere.
 
@@ -125,7 +132,7 @@ For example, for a Docker Host:
 
 - Docker engine installed  
 - containers run successfully  
-- directory structure exists under `/srv/docker`  
+- directory structure exists under `/srv/host-docker`  
 - correct network behaviour  
 - logs writing to expected locations  
 
@@ -194,6 +201,3 @@ systems/hypervisors/proxmox/proxmox-worker-service-host.md
 ---
 
 This document defines how Host Service Layer guides must be structured to stay consistent across the Hvelvigen repository.
-
-
-
