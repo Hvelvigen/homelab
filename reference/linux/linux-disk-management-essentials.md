@@ -11,6 +11,8 @@ It’s written for anyone comfortable in a terminal but not necessarily living a
 Before touching a disk, you need to understand what the system can actually see.  
 These commands help you discover disks, check their layout, and confirm what’s already mounted so you don’t accidentally modify the wrong device.
 
+And remember, before running anything destructive, make sure you’re looking at the right disk — lsblk is your friend here.
+
 ### List block devices
 ```
 lsblk
@@ -52,6 +54,8 @@ New disks will appear here with no FSTYPE in `lsblk`.
 ## 2. Partitioning a New Disk (GPT)
 A disk must be partitioned before creating a filesystem. GPT is standard for modern systems, reliable, and supported everywhere.
 
+GPT behaves consistently across modern systems, which is lovely when you just want things to work without the occasional MBR chaos of decades past (/wave BCDEdit).
+
 ### Using parted
 ```
 sudo parted /dev/sdb
@@ -62,11 +66,15 @@ quit
 Creates a GPT partition table and one full‑disk partition.  
 `ext4` here is only a label — the actual filesystem comes later with `mkfs`.
 
+**ZFS** considerations are covered in dedicated docs.
+
 ### Using fdisk (interactive)
 ```
 sudo fdisk /dev/sdb
 g
 n
+  - The default value '1' is just fine.
+  - Use the default value for First and Last sector.  
 w
 ```
 `g` → create GPT table  
@@ -95,6 +103,8 @@ Adds a human-readable label, helpful when managing many disks or troubleshooting
 ## 4. Mounting a Disk (Temporary)
 Temporary mounts let you test a disk before committing it to `/etc/fstab`.
 
+They're also a nice way to sanity-check a drive before committing it to your long-term layout — a quick “does this behave?” test.
+
 ```
 sudo mkdir -p /mnt/testdisk
 ```
@@ -119,7 +129,8 @@ Cleanly detaches it — always unmount before editing fstab or resizing partitio
 
 ## 5. Permanent Mounting with /etc/fstab
 Temporary mounts vanish on reboot.  
-`fstab` entries make them persistent — but mistakes here can render your system unbootable, so always test changes.
+`fstab` is powerful — but unforgiving. It lets you make mounts persistent — but mistakes here can render your system unbootable. 
+A single typo can ruin your morning, so always test with mount -a before rebooting. Your uptime (and sanity) will thank you.
 
 ### Get UUID
 ```
@@ -150,7 +161,7 @@ If errors appear: fix before rebooting.
 ---
 
 ## 6. Disk Health & SMART
-SMART gives insight into physical drive health — invaluable for catching problems early.
+SMART gives insight into physical drive health — invaluable for catching problems early, there is no value on a virtual hard disk.
 
 Install tools:
 ```
@@ -186,6 +197,7 @@ du -h --max-depth=1 /srv | sort -h
 
 ## 8. Expanding Disks (VM-based)
 Virtual disks grow easily — the OS just needs to be told.
+Before attempting the below, you'll need to expand the virtual disk in your hypervisor.
 
 Rescan disk:
 ```
@@ -225,13 +237,15 @@ lsblk
 
 ---
 
-## 10. Common Patterns for Docker Hosts
+## 10. Example Layouts Common in Homelabs
 Standardising disk layouts keeps deployments repeatable.
 
 ### Dedicated disk for containers
 ```
 /srv/docker/
 ```
+
+This layout assumes the host is using the Docker Host Service Layer (/srv/host-docker). See HSL docs for full structure.
 Use this as the parent directory for all container data.
 
 ### Multi-service layout
@@ -276,3 +290,4 @@ If you’re not sure — stop, check `lsblk`, and confirm paths first.
 ## 13. Summary
 This guide provides a clear, repeatable baseline for working with disks on Ubuntu Server.  
 It supports the storage workflows you’ll use when building Docker hosts, deploying services, and maintaining a tidy, predictable homelab environment.
+This keeps everything tidy and predictable. The separation of concerns is a nice bonus.
