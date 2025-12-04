@@ -228,7 +228,7 @@ This entire folder is intentionally ignored by automation.
 ---
 
 # 8. Complete Example — Docker Host Running Multiple Services
-
+```
   /srv/
   ├── host-docker/
   │ ├── config/
@@ -255,7 +255,7 @@ This entire folder is intentionally ignored by automation.
   │
   ├── logs/
   └── local/
-
+```
 ---
 
 # 9. Summary
