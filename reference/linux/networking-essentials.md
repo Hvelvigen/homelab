@@ -40,7 +40,7 @@ That’s the rule. No secret handshake required.
 ---
 
 ## 3. IP Addresses — What They Actually Represent
-An IP address is a network address. Not magical. Not scary.
+An IP address is a network address.
 
 Example:
 
