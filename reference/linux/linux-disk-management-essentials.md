@@ -290,4 +290,4 @@ If you’re not sure — stop, check `lsblk`, and confirm paths first.
 ## 13. Summary
 This guide provides a clear, repeatable baseline for working with disks on Ubuntu Server.  
 It supports the storage workflows you’ll use when building Docker hosts, deploying services, and maintaining a tidy, predictable homelab environment.
-This keeps everything tidy and predictable. The separation of concerns is a nice bonus.
+The separation of concerns is a nice bonus.
