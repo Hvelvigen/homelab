@@ -23,7 +23,7 @@ This guide is beginner‑friendly — with no assumptions, and no jargon.
 
 ## 2. Understanding the Linux Filesystem
 
-Linux organises everything into a single tree that starts at the **root**:
+Linux organises everything into a single tree that starts at the **root** `/`:
 
 ```
 /
