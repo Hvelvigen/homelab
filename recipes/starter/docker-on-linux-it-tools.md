@@ -192,7 +192,7 @@ Follow: `systems/linux/docker/docker-on-linux-as-a-service-host.md`
 ---
 
 ### 5. Deploy IT-Tools Service Pattern  
-Follow: `systems/docker/it-tools-on-docker.md`
+Follow: `systems/docker/utilities/it-tools.md`
 
 **You should now have:**
 - IT-Tools running on your LAN  
