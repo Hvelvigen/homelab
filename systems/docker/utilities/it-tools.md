@@ -259,20 +259,21 @@ If it didn’t error, job done.
 When IT-Tools retires from service:
 
 1. Stop and remove the container:
+   *(From within the /it-tools folder)*
    ```bash
    docker compose down
    ```
-2. Remove the network (optional):
+3. Remove the network (optional):
    ```bash
    docker network rm ittools_net
    ```
-3. Archive or delete its directories:
+4. Archive or delete its directories:
    ```bash
    sudo tar czf /srv/docker/it-tools-archive.tar.gz /srv/docker/it-tools
    sudo rm -rf /srv/docker/it-tools
    sudo rm -rf /srv/logs/it-tools
    ```
-4. Remove or update your reverse proxy entry.
+5. Remove or update your reverse proxy entry.
 
 The goal: a clean exit, no leftovers haunting the host.
 
