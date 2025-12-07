@@ -156,7 +156,7 @@ services:
 
     # Internal-only; reverse proxy handles exposure.
     ports:
-      - "127.0.0.1:8181:80"
+      - "8181:80"
 
     volumes:
       - ./config:/config
