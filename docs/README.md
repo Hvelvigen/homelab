@@ -21,4 +21,4 @@ You’ll find guidance here on:
 This isn’t meant to be read once and forgotten.  
 It’s a reference, a companion, and occasionally a cautionary tale.
 
-If it stops even *one* Christmas goat from slipping, it’s already paying for itself.
+If it stops even *one* Christmas 'goat' from slipping, it’s already paying for itself.
