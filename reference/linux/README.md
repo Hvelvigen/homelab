@@ -1,11 +1,10 @@
-# Reference
+# Linux Reference
 
-This directory provides fast, practical reference material.
+This section contains Linux-specific reference material.
 
-Reference items are:
-- factual  
-- task-focused  
-- concise  
-- non-narrative  
+Documents here provide:
+- common commands  
+- short explanations  
+- practical examples  
 
-Guides here complement system and documentation sections but do not replace them.
+They are intended for quick lookup rather than full guides.
