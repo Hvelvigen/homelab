@@ -94,8 +94,6 @@ A couple of symbols you’ll see all the time:
 
 ~  → your home directory (your personal starting point)
 
-Once you’re comfortable moving around with these two ideas — where you are and where you’re going — every other guide in Hvelvigen becomes much easier to follow.
-
 ---
 
 ## 4. Editing Files
