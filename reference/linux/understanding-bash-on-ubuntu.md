@@ -134,6 +134,7 @@ A good rule of thumb:
 Use sudo only when the system asks for it or when you know the action genuinely requires admin access.
 
 If a command needs higher privileges and you run it without sudo, Bash will make it very clear. You won’t break anything — you’ll just be reminded to run it with the right permissions.
+*(Tip: press ↑ to recall the command, move to the start of the line, and add 'sudo ' — including the space — before rerunning it.)*
 
 ---
 
