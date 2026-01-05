@@ -301,6 +301,10 @@ Key points:
 
 ---
 
+A separate Advanced DNS guide builds on this foundation and covers additional record types (A, AAAA, MX, TXT, etc.), Active Directory–integrated DNS, and the practical nuances of DNS behaviour that are not typically covered in introductory or standard reference material.
+
+---
+
 ## 12. Appendix
 
 ### Useful Commands
