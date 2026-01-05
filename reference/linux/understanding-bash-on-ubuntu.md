@@ -151,7 +151,7 @@ sudo apt-get install <package>
 sudo apt-get remove <package>
 ```
 
-This is how you install things like `btop`, Docker, OpenSSH Server, and other baseline tools.
+This is how you install things like `btop`, OpenSSH Server, and other baseline tools.
 
 ---
 
