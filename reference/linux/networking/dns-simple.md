@@ -1,5 +1,5 @@
 # DNS — The Simple Version
-A clear, beginner-friendly explanation of what DNS is and why everything falls apart the moment it sneezes.
+A clear, beginner-friendly explanation of what DNS (Domain Name System) is and why everything falls apart the moment it sneezes.
 
 ---
 
