@@ -176,7 +176,7 @@ A good habit is to ask yourself:
 - Does the message mention a file, a service, or a permission?
 
 Most fixes become obvious once you understand which part of the command failed.
-This style of reading output is one of the best skills you’ll build — and it makes every guide in Hvelvigen easier to troubleshoot if something goes wrong.
+This style of reading output is one of the best skills you’ll build — and it makes everything easier to troubleshoot if something goes wrong.
 
 ---
 
