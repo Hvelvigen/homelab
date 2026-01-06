@@ -1,4 +1,4 @@
-# LAN & Routing — The Simple Version
+# LAN & Routing — Foundations
 A gentle introduction to how traffic actually moves inside and outside your network.
 
 ---
