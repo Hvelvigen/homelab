@@ -1,4 +1,4 @@
-# Ports & Services — The Simple Version
+# Ports & Services — Foundations
 A clear, beginner-friendly explanation of what ports are, how services use them, and why “it works here but not there” could very well be a port problem.
 
 ---
