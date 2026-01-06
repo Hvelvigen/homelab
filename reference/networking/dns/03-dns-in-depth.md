@@ -1,6 +1,6 @@
 This is a placeholder document and will be separated into areas of concern.
 
-# DNS — The Theory Version
+# DNS — In Depth
 A deep, technical exploration of how DNS actually works, why it behaves the way it does, and where real-world implementations diverge from simplified explanations.
 
 This document assumes familiarity with:
