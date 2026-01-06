@@ -1,4 +1,4 @@
-# Ports & Services — Full Version (Practical Admin Depth)
+# Ports & Services
 
 A practical, detailed, admin-friendly guide to understanding ports, listeners, and service access in a homelab.  
 This document builds on the Simple Version and gives you the mental models and vocabulary you need to diagnose access issues confidently.
