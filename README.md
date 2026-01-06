@@ -1,4 +1,4 @@
-# Hvelvigen Homelab Baseline
+# Hvelvigen (Homelab)
 
 **TL;DR:** A modular, platform-agnostic baseline for building and documenting a clean homelab.  
 Take what you need, ignore what you don’t, and mix the components to suit your environment.
