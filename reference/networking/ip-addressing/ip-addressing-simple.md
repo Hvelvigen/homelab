@@ -1,4 +1,4 @@
-# IP Addressing — The Simple Version
+# IP Addressing — Foundations
 A clear, beginner-friendly explanation of what IP addresses are and how they behave in a homelab.
 
 ---
