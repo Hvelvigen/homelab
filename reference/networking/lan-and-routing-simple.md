@@ -6,7 +6,7 @@ A gentle introduction to how traffic actually moves inside and outside your netw
 ## 1. LAN Basics
 Devices on the same subnet can talk to each other directly — no routing needed.
 
-Example:
+Example: 
 ```
 10.10.1.20 ↔ 10.10.1.50
 ```
