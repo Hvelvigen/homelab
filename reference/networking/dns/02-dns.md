@@ -105,7 +105,7 @@ If your resolver doesn’t know the answer, it forwards your question upstream.
 Unbound, Pi-hole and most home resolvers handle recursion automatically.
 
 ### 5. Return the final answer
-Once resolved, the system stores the IP for the duration of its TTL.
+Once resolved, the system stores the IP for the duration of its TTL (Time To Live).
 
 This layered process is why DNS may appear “wrong” even when your server is correct — caches often tell yesterday’s story.
 
