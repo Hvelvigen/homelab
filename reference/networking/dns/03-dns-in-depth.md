@@ -3,9 +3,9 @@ This is a placeholder document and will be separated into areas of concern.
 # DNS — In Depth
 A deep, technical exploration of how DNS actually works, why it behaves the way it does, and where real-world implementations diverge from simplified explanations.
 
-This document assumes familiarity with:
-- DNS — The Simple Version
-- DNS — Full Version (Practical Admin Depth)
+This document builds on:
+- DNS Foundations
+- DNS
 
 It focuses on protocol mechanics, architectural intent, and implementation nuance rather than troubleshooting shortcuts.
 
@@ -29,7 +29,6 @@ Clarify what DNS *is not*:
 **Audience**
 - homelab builders
 - system administrators
-- infrastructure engineers
 - anyone who has asked “why does DNS behave like this?”
 
 ---
