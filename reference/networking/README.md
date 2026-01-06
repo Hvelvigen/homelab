@@ -14,7 +14,7 @@ This section covers:
 - **Ports & Services** — why your service works locally but not remotely (and how to fix it)  
 - **Networking Essentials** — the foundational concepts that tie everything together  
 
-'Deep dives' into topics can be found in the section subfolders.
+- **'Deep dives'** into topics can be found in the section subfolders.
 ---
 
 ## How to Use This Section
