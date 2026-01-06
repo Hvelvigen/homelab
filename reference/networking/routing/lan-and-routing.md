@@ -1,4 +1,4 @@
-# LAN & Routing — Full Version (Practical Admin Depth)
+# LAN & Routing
 
 A practical, admin-focused guide to how devices communicate inside and outside your homelab — with enough detail to make sense of routing decisions, but not enough to make you regret reading it.
 
