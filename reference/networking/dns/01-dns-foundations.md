@@ -1,4 +1,4 @@
-# DNS — The Simple Version
+# DNS — Foundations
 A clear, beginner-friendly explanation of what DNS (Domain Name System) is and why everything falls apart the moment it sneezes.
 
 ---
