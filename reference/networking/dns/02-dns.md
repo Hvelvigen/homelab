@@ -1,6 +1,6 @@
 # DNS
 A practical, detailed, admin-friendly guide to DNS in a homelab.  
-This document builds on *DNS — The Simple Version* and gives you solid mental models, correct terminology, and enough depth to diagnose and prevent common DNS issues.
+This document builds on *DNS — Foundations* and gives you solid mental models, correct terminology, and enough depth to diagnose and prevent common DNS issues.
 
 ---
 
