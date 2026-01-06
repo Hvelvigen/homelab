@@ -11,28 +11,6 @@ It focuses on protocol mechanics, architectural intent, and implementation nuanc
 
 ---
 
-## 0. Scope and Intent
-
-**Purpose of this document**
-
-Explain DNS as:
-- a protocol family
-- a distributed database
-- a trust and delegation system
-- an eventually-consistent, cache-heavy control plane
-
-Clarify what DNS *is not*:
-- a directory service
-- a real-time system
-- a strongly consistent database
-
-**Audience**
-- homelab builders
-- system administrators
-- anyone who has asked “why does DNS behave like this?”
-
----
-
 ## 1. DNS as a Distributed System
 
 At its core, DNS is a **globally distributed, hierarchical database**. There is no single server, organisation, or system that holds “the DNS”. Instead, responsibility for DNS data is **deliberately fragmented** across millions of independently operated servers, each authoritative only for the portion of the namespace it has been delegated. This design is intentional: it avoids central points of failure, distributes operational load, and allows the system to scale to internet size.
