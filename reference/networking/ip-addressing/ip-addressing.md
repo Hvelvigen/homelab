@@ -1,4 +1,4 @@
-# IP Addressing — Full Version (Practical Admin Depth)
+# IP Addressing
 
 A practical, detailed, admin-friendly guide to IPv4 addressing in a homelab.  
 This document builds on the simple version and gives you clear mental models, correct terminology, and enough depth to operate and troubleshoot confidently.
