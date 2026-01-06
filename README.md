@@ -63,7 +63,7 @@ This repository does *not* include anything environment-specific or proprietary:
 - **/systems/** — platform-specific baselines (Proxmox, Hyper-V, Home Assistant, Docker, Linux, etc.)  
   *Pick your platform and follow a structured pattern without reinventing anything.*
 
-- **/reference/** — command sets, cheat sheets, and best-practice notes  
+- **/reference/** — educational content, command sets, cheat sheets, and best-practice notes  
   *Quick-look tools for getting things done without digging through long guides.*
 
 - **/docs/** — naming, structure, and organisation guidance  
