@@ -21,7 +21,7 @@ This section covers:
 
 Each topic comes in two versions:
 
-### **Simple Version**
+### **Foundations Version**
 Start here if: 
 - You're new to networking  
 - You want a quick mental model without drowning in detail  
@@ -31,7 +31,7 @@ These guides teach you *why* things work the way they do, not just commands to m
 
 ### **Full Version**
 Read this if:
-- You've grasped the simple version and want more depth  
+- You've grasped the Foundations version and want more depth  
 - You need to diagnose problems confidently  
 - You want to understand edge cases and nuances  
 
@@ -46,13 +46,13 @@ If you're starting from scratch:
 1. **Networking Essentials** (`networking-essentials.md`)  
    *The foundation.  Read this first — it's genuinely worth 20 minutes.*
 
-2. **IP Addressing — Simple** (`ip-addressing-simple.md`)  
+2. **IP Addressing — Foundations** (`ip-addressing-Foundations.md`)  
    *Understand what IP addresses are and why CIDR matters.*
 
-3. **LAN & Routing — Simple** (`lan-and-routing-simple.md`)  
+3. **LAN & Routing — Foundations** (`lan-and-routing-Foundations.md`)  
    *How devices decide who to talk to.*
 
-4. **Ports & Services — Simple** (`ports-and-services-simple.md`)  
+4. **Ports & Services — Foundations** (`ports-and-services-Foundations.md`)  
    *Why services work here but not there.*
 
 Then, when you're comfortable (or when you hit a problem):
@@ -70,8 +70,8 @@ Then, when you're comfortable (or when you hit a problem):
 
 ## Common Questions (Quick Answers)
 
-### "What's the difference between the simple and full versions?"
-**Simple** teaches the concept and mental model.   
+### "What's the difference between the Foundations and full versions?"
+**Foundations** teaches the concept and mental model.   
 **Full** gives you vocabulary, edge cases, and troubleshooting patterns.
 
 You don't *need* the full versions to run a homelab, but they're invaluable when things go wrong.
@@ -95,7 +95,7 @@ See **IP Addressing — Full Version**, section 4 for more detail.
 
 ## How These Guides Fit into Your Homelab Journey
 
-- **Week 1:** Read Networking Essentials + Simple versions.  Your homelab mostly works. 
+- **Week 1:** Read Networking Essentials + Foundations versions.  Your homelab mostly works. 
 - **Week 4:** Read Full versions.  You now diagnose problems instead of reinstalling.
 - **Month 3:** You reference the specific parts you need when something unusual happens.
 - **Year 2:** You're casually explaining these concepts to someone else.
