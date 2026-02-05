@@ -255,5 +255,6 @@ This is a **starter homelab**, not an enterprise edge appliance.
 
 ---
 
-This document reflects **decisions made**, not options considered.
-I expect the OptiPlex to disagree later.
+>This document reflects **decisions made**, not options considered.
+>
+>I expect the OptiPlex to disagree later.
