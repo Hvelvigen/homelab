@@ -145,7 +145,7 @@ Allocations are sized to fit a **6-core CPU** with **intentional light oversubsc
 | Component | vCPU | RAM | Notes |
 |---|---|---|---|
 | Proxmox host | 1 | 2–3 GB | Host responsiveness |
-| OPNsense | 2 | 2 GB | Firewall + Wi-Fi |
+| OPNsense | 2 | 4 GB | Firewall + Wi-Fi |
 | Home Assistant | 2 | 4 GB | Latency-sensitive |
 | Ubuntu Server (Docker) | 2 | 6–8 GB | Shared services |
 
