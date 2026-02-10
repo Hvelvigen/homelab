@@ -9,10 +9,10 @@ Keyboard-only inputs appear in brackets; each `[]` represents a single key press
 
 ## Repository Location
 
-systems/
-└── proxmox/
-    └── proxmox-ve-installation.md        ← you are here
-    └── proxmox-ve-post-installation.md
+    systems/
+    └── proxmox/
+        └── proxmox-ve-installation.md        ← you are here
+        └── proxmox-ve-post-installation.md
 
 ---
 
