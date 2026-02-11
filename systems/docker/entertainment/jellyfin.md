@@ -174,13 +174,10 @@ Add:
         image: jellyfin/jellyfin:latest
         container_name: jellyfin
         restart: unless-stopped
-
-        # Optional: run as your media service user
-        # user: "1000:1000"
-
+        
         environment:
           - TZ=Europe/London
-          # Optional but handy if you ever reverse proxy it:
+          # Optional but handy for reverse proxy:
           # - JELLYFIN_PublishedServerUrl=http://jellyfin.lab.local
 
         volumes:
@@ -200,12 +197,12 @@ Add:
           # - "7359:7359/udp"
           # - "1900:1900/udp"
 
-        # networks:
-        #   - jellyfin-net
+        networks:
+          - jellyfin-net
 
-    # networks:
-    #   jellyfin-net:
-    #     driver: bridge
+    networks:
+      jellyfin-net:
+        driver: bridge
 
 Notes:
 
