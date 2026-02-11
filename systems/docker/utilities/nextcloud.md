@@ -80,18 +80,22 @@ Add:
         image: nextcloud/all-in-one:latest
         container_name: nextcloud-aio-mastercontainer
         restart: unless-stopped
-
+    
         ports:
           - "80:80"
           - "443:443"
           - "8080:8080"
-
+    
         environment:
           - TZ=Europe/London
-
+    
         volumes:
           - nextcloud_aio_mastercontainer:/mnt/docker-aio-config
           - /var/run/docker.sock:/var/run/docker.sock
+    
+    volumes:
+      nextcloud_aio_mastercontainer:
+        external: true
 
 Create the named volume
 
