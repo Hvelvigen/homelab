@@ -277,10 +277,17 @@ Once Docker is installed cleanly, the fun parts (configuring its behaviour and d
 ---
 
 ## 4. Configure Docker to Behave  
-Installing Docker is only half the job.  
+Installing Docker is only half the job.
 
-No one wants Docker filling `/var/lib/docker` like an unsupervised toddler.
-Left untouched, Docker will happily store its runtime, layers, and volumes in `/var/lib/docker` — which is exactly what we’re avoiding.
+A small quality-of-life adjustment makes day-to-day use less painful: add your admin account to the `docker` group so you’re not prefixing every command with `sudo`:
+
+```bash
+sudo usermod -aG docker <username>
+```
+
+You’ll need to log out and back in for this to take effect.
+
+---
 
 A **Hvelvigen Docker Host** must:
 
@@ -343,7 +350,7 @@ Docker now *should* be using `/srv/host-docker/runtime`
 Let’s confirm that:
 
 ```bash
-sudo docker info | grep "Docker Root Dir"
+docker info | grep "Docker Root Dir"
 ```
 
 Expected:
@@ -361,7 +368,7 @@ If it still says `/var/lib/docker`, something earlier wasn’t configured correc
 Before deploying anything real, we test the engine, networking, permissions, and storage all in one simple command.
 
 ```bash
-sudo docker run --rm hello-world
+docker run --rm hello-world
 ```
 
 This confirms:
@@ -399,7 +406,7 @@ We only used hello-world to verify the host.
 It doesn’t need to stay around.
 
 ```bash
-sudo docker image rm hello-world
+docker image rm hello-world
 ```
 
 This returns your pristine Docker Host to a clean slate, ready for real workloads.
