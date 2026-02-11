@@ -90,8 +90,21 @@ Add:
           - TZ=Europe/London
 
         volumes:
-          - /srv/docker/nextcloud-aio/mastercontainer:/mnt/docker-aio-config
-          - /var/run/docker.sock:/var/run/docker.sock:ro
+          - nextcloud_aio_mastercontainer:/mnt/docker-aio-config
+          - /var/run/docker.sock:/var/run/docker.sock
+
+Create the named volume
+
+    docker volume create \
+      --driver local \
+      --opt type=none \
+      --opt o=bind \
+      --opt device=/srv/docker/nextcloud-aio/mastercontainer \
+      nextcloud_aio_mastercontainer
+
+This tells Docker:
+
+>“The volume nextcloud_aio_mastercontainer actually lives at /srv/docker/nextcloud-aio/mastercontainer.”
 
 Deploy:
 
