@@ -140,29 +140,29 @@ sudo nano docker-compose.yml
 
 - Compose file:
 ```yaml
-    services:
-      speedtest-tracker:
-        image: lscr.io/linuxserver/speedtest-tracker:latest
-        container_name: speedtest-tracker
-        restart: unless-stopped
+services:
+  speedtest-tracker:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
+    container_name: speedtest-tracker
+    restart: unless-stopped
 
-        environment:
-          - PUID=1000
-          - PGID=1000
-          - TZ=Europe/London
-          - APP_KEY=base64:YOUR_GENERATED_KEY_HERE
-          - APP_URL=https://speedtest.lab.local
-          - DB_CONNECTION=sqlite
-          # - SPEEDTEST_SCHEDULE=0 * * * *
-          # - SPEEDTEST_SERVERS=
-          # - DISPLAY_TIMEZONE=Europe/London
-          # - PRUNE_RESULTS_OLDER_THAN=365
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - APP_KEY=base64:YOUR_GENERATED_KEY_HERE
+      - APP_URL=https://speedtest.lab.local
+      - DB_CONNECTION=sqlite
+      # - SPEEDTEST_SCHEDULE=0 * * * *
+      # - SPEEDTEST_SERVERS=
+      # - DISPLAY_TIMEZONE=Europe/London
+      # - PRUNE_RESULTS_OLDER_THAN=365
 
-        volumes:
-          - /srv/docker/speedtest-tracker/config:/config
+    volumes:
+      - /srv/docker/speedtest-tracker/config:/config
 
-        ports:
-          - "6875:80"
+    ports:
+      - "6875:80"
 ```
 Deploy:
 
