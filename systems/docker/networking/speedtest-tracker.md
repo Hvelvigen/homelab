@@ -164,6 +164,13 @@ services:
     ports:
       - "6875:80"
 ```
+
+>Note: You **must** set the APP_KEY, you can create one in bash using
+>
+>```
+>echo -n 'base64:'; openssl rand -base64 32
+>``` 
+
 Deploy:
 
     cd /srv/docker/speedtest-tracker
