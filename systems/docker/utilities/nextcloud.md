@@ -70,7 +70,7 @@ File: `/srv/docker/nextcloud-aio/docker-compose.yml`
 
 Create the file:
 
-    cd /srv/docker/uptime-kuma
+    cd /srv/docker/nextcloud-aio
     nano docker-compose.yml
 
 Add:
