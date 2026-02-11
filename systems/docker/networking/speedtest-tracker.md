@@ -184,9 +184,15 @@ Access:
 
     http://<docker-host-ip>:6875
 
+> The default credentials are
+> ```
+> admin@example.com
+> password
+> ```
+
 Immediately:
 
-- Change default admin credentials  
+- **Change default admin credentials** 
 - Confirm timezone  
 - Set test schedule  
 - Optional: configure server pinning  
