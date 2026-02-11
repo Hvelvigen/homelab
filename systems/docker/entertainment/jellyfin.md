@@ -162,7 +162,12 @@ If you map Jellyfin to run as UID/GID 1000 (typical service user):
 
 **File:** `/srv/docker/jellyfin/docker-compose.yml`
 
-    version: "3.8"
+Create the file:
+
+    cd /srv/docker/jellyfin
+    nano docker-compose.yml
+
+Add:
 
     services:
       jellyfin:
