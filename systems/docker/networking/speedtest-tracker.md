@@ -134,7 +134,7 @@ Set ownership (example UID/GID 1000):
 - Navigate to service directory:
 
  ```bash
-cd /srv/docker/unifi-controller
+cd /srv/docker/speedtest-tracker
 sudo nano docker-compose.yml
 ```
 
