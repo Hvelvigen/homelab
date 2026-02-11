@@ -76,12 +76,14 @@ You are comfortable using:
 
 ## 4. Architecture & Data Flow
 
-- Single container deployment  
-- Embedded MongoDB (no external database required)  
-- Persistent data mapped to host  
-- Host networking used for device discovery  
+- Two-container deployment:
+  - `unifi-controller` (UniFi Network Application)
+  - `unifi-db` (MongoDB 4.4 instance)
+- External MongoDB container required and managed as part of this pattern
+- Both containers attached to a dedicated Docker bridge network (`unifi-net`)
+- UniFi controller ports published on the Docker host for UI and device communication
 
-Host networking is used intentionally to avoid L2 adoption and discovery complications.
+> Note: a host-network variant is possible if required for more complex L2 discovery scenarios, but this pattern standardises on a bridge network with explicit ports.
 
 ---
 
@@ -98,8 +100,10 @@ sudo mkdir -p /srv/logs/unifi-controller
 sudo chown -R <uid>:<gid> /srv/docker/unifi-controller /srv/logs/unifi-controller
 ```
 
-`config/` is the critical persistent data location.  
-`logs/` is optional if file logging is required.
+`config/` is the critical persistent data location.
+
+`logs/` is reserved for future file-based logging if required;  
+the initial pattern relies on `docker logs` for runtime inspection.
 
 ---
 
@@ -115,35 +119,69 @@ sudo chown -R <uid>:<gid> /srv/docker/unifi-controller /srv/logs/unifi-controlle
 
 ---
 
-## 7. Deployment (Docker Compose — Host Network)
+## 7. Deployment (Docker Compose)
 
 - Navigate to service directory:
 
 ```bash
 cd /srv/docker/unifi-controller
-nano docker-compose.yml
+sudo nano docker-compose.yml
 ```
 
 - Compose file:
 
 ```yaml
-version: "3.9"
-
 services:
+  unifi-db:
+    image: mongo:4.4.25
+    container_name: unifi-db
+    restart: unless-stopped
+    networks:
+      - unifi-net
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: supersecretroot
+    volumes:
+      - /srv/docker/unifi-controller/db:/data/db
+
   unifi-controller:
     image: lscr.io/linuxserver/unifi-network-application:latest
     container_name: unifi-controller
     restart: unless-stopped
-    network_mode: host
-
+    depends_on:
+      - unifi-db
+    networks:
+      - unifi-net
     environment:
       PUID: "1000"
       PGID: "1000"
       TZ: "Europe/London"
-      MEM_LIMIT: "1024M"
+
+      MONGO_HOST: unifi-db
+      MONGO_PORT: "27017"
+      MONGO_DBNAME: unifi
+      MONGO_USER: root
+      MONGO_PASS: supersecretroot
+      MONGO_AUTHSOURCE: admin
 
     volumes:
-      - ./config:/config
+      - /srv/docker/unifi-controller/config:/config
+
+    ports:
+      - "8443:8443"
+      - "8080:8080"
+      - "3478:3478/udp"
+      - "10001:10001/udp"
+      - "1900:1900/udp"
+      - "8843:8843"
+      - "8880:8880"
+      - "6789:6789"
+      - "5514:5514/udp"
+
+networks:
+  unifi-net:
+    driver: bridge
+
 ```
 
 - Deploy:
@@ -231,11 +269,11 @@ Remove any reverse proxy or DNS references as required.
 
 ## 11. Validation Checklist
 
-- Config directory exists and is owned correctly  
-- Container running with host networking  
-- UI accessible via LAN IP on 8443  
-- Devices adopted and reporting connected  
-- Backups tested  
-- Upgrade workflow confirmed functional  
+- `unifi-db` and `unifi-controller` containers are both running
+- Both services are attached to the `unifi-net` Docker network
+- UniFi UI accessible via `https://<docker-host-ip>:8443`
+- Devices adopted and reporting connected
+- Backups tested (`/srv/docker/unifi-controller/config`)
+- Upgrade workflow confirmed functional (`docker compose pull && docker compose up -d`)
 
 When these conditions are met, the UniFi Network Application is structured, reproducible, and maintainable within the Docker Host Service Layer.
