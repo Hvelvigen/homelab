@@ -143,8 +143,6 @@ nano docker-compose.yml
 Add:
 
 ```yaml
-version: "3.9"
-
 services:
   it-tools:
     image: ghcr.io/corentinth/it-tools:latest
