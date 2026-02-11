@@ -68,7 +68,12 @@ Ownership can remain root; AIO handles internal permissions.
 
 File: `/srv/docker/nextcloud-aio/docker-compose.yml`
 
-    version: "3.8"
+Create the file:
+
+    cd /srv/docker/uptime-kuma
+    nano docker-compose.yml
+
+Add:
 
     services:
       nextcloud-aio-mastercontainer:
