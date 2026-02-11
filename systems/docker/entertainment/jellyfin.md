@@ -34,46 +34,64 @@ There are two common scenarios.
 
 1. Identify the disk:
 
+    ```bash
     lsblk -f
+    ```
 
    Confirm which device is your media disk (assume `/dev/sdb` here).
 
 2. Partition it (if needed):
 
+    ```bash
     sudo parted /dev/sdb -- mklabel gpt
     sudo parted -a opt /dev/sdb -- mkpart primary ext4 0% 100%
+    ```
 
 3. Create filesystem:
 
+    ```bash
     sudo mkfs.ext4 -L MEDIA /dev/sdb1
+    ```
 
 4. Create mountpoint:
 
+    ```bash
     sudo mkdir -p /mnt/media
+    ```
 
 5. Get the UUID:
 
+    ```bash
     sudo blkid /dev/sdb1
+    ```
 
    Note the `UUID="..."` value.
 
 6. Add to `/etc/fstab`:
 
+    ```bash
     sudo nano /etc/fstab
+    ```
 
    Add a line (replace `YOUR-UUID-HERE` with the actual UUID):
 
+    ```bash
     UUID=YOUR-UUID-HERE  /mnt/media  ext4  defaults,noatime  0  2
+    ```
 
 7. Mount it:
 
+    ```bash
     sudo mount -a
+    ```
 
 8. Create the folder structure:
 
+    ```bash
     sudo mkdir -p /mnt/media/movies
     sudo mkdir -p /mnt/media/shows
     sudo mkdir -p /mnt/media/music
+    ```
 
 ---
 
@@ -83,25 +101,35 @@ In that case, you can keep the data physically on `sdb` under `/srv`, and bind-m
 
 1. Create the media directory on the data disk:
 
+    ```bash
     sudo mkdir -p /srv/media/movies
     sudo mkdir -p /srv/media/shows
     sudo mkdir -p /srv/media/music
+    ```
 
-2. Create `/mnt/media`:
+1. Create `/mnt/media`:
 
+    ```bash
     sudo mkdir -p /mnt/media
+    ```
 
-3. Add a bind-mount to `/etc/fstab`:
+2. Add a bind-mount to `/etc/fstab`:
 
+    ```bash
     sudo nano /etc/fstab
+    ```
 
    Add:
 
+    ```bash
     /srv/media  /mnt/media  none  bind  0  0
+    ```
 
-4. Mount:
-
+3. Mount:
+4. 
+    ```bash
     sudo mount -a
+    ```
 
 Now `/mnt/media` lives on `sdb` via `/srv/media`, but Jellyfin only ever sees `/mnt/media`.
 
