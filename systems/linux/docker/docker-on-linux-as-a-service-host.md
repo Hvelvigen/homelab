@@ -343,7 +343,7 @@ Docker now *should* be using `/srv/host-docker/runtime`
 Let’s confirm that:
 
 ```bash
-docker info | grep "Docker Root Dir"
+sudo docker info | grep "Docker Root Dir"
 ```
 
 Expected:
@@ -361,7 +361,7 @@ If it still says `/var/lib/docker`, something earlier wasn’t configured correc
 Before deploying anything real, we test the engine, networking, permissions, and storage all in one simple command.
 
 ```bash
-docker run --rm hello-world
+sudo docker run --rm hello-world
 ```
 
 This confirms:
@@ -399,7 +399,7 @@ We only used hello-world to verify the host.
 It doesn’t need to stay around.
 
 ```bash
-docker image rm hello-world
+sudo docker image rm hello-world
 ```
 
 This returns your pristine Docker Host to a clean slate, ready for real workloads.
