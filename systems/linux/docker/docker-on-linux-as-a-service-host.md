@@ -123,6 +123,7 @@ lsblk -f
 Then edit `fstab`:
 
 ```bash
+cp /etc/fstab /etc/fstab.bak
 sudo nano /etc/fstab
 ```
 
@@ -140,6 +141,7 @@ Now mount it:
 
 ```bash
 sudo mount -a
+systemctl daemon-reload
 df -h | grep srv
 ```
 
