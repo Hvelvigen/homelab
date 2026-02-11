@@ -131,10 +131,15 @@ Set ownership (example UID/GID 1000):
 
 ## 7. Docker Compose
 
-File: `/srv/docker/speedtest-tracker/docker-compose.yml`
+- Navigate to service directory:
 
-    version: "3.8"
+ ```bash
+cd /srv/docker/unifi-controller
+sudo nano docker-compose.yml
+```
 
+- Compose file:
+```yaml
     services:
       speedtest-tracker:
         image: lscr.io/linuxserver/speedtest-tracker:latest
@@ -158,7 +163,7 @@ File: `/srv/docker/speedtest-tracker/docker-compose.yml`
 
         ports:
           - "6875:80"
-
+```
 Deploy:
 
     cd /srv/docker/speedtest-tracker
