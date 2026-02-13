@@ -99,7 +99,7 @@ Whilst here (and because I knew I'd need it later) I also added the **Ubuntu Ser
 This was intentionally modest.
 
 - **vCPU:** 2 (host CPU type)  
-- **Memory:** 2 GB  
+- **Memory:** 4 GB  
 - **Disk:** 32 GB (thin provisioned)  
 - **Machine type:** q35  
 - **BIOS:** OVMF (UEFI)
